@@ -18,7 +18,7 @@ struct HomeScreen: View {
             if categoryList.isEmpty {
                 Text("Empty List")
             } else {
-                
+                CategoryListView
             }
         }
         .toolbar {
@@ -36,6 +36,24 @@ struct HomeScreen: View {
 //MARK: - Subviews
 
 extension HomeScreen {
+    
+    var CategoryListView: some View {
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+                ForEach(categoryList, id: \.id) { item in
+                    let viewModel = CategoryViewModel(category: item)
+                    
+                    NavigationLink(value: item) {
+                        CategoryView(viewModel: viewModel)
+                    }
+                }
+            }
+            .navigationDestination(for: CategoryModel.self, destination: { item in
+//                navigate to list
+            })
+            .padding()
+        }
+    }
     
     var AddNewCategoryButton: some View {
         
