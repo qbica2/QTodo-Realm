@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03DE5402A62B8BB00A79835 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE53F2A62B8BB00A79835 /* CategoryView.swift */; };
+		E03DE5432A62B91000A79835 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5422A62B91000A79835 /* CategoryViewModel.swift */; };
+		E03DE5452A62C2EA00A79835 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5442A62C2EA00A79835 /* AddCategoryView.swift */; };
+		E03DE5472A62C6CE00A79835 /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5462A62C6CE00A79835 /* CustomSheetView.swift */; };
+		E03DE5492A62C6F400A79835 /* CustomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5482A62C6F400A79835 /* CustomSheetViewModel.swift */; };
 		E0B2DA172A62B49B0067A58F /* QTodo_RealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2DA162A62B49B0067A58F /* QTodo_RealmApp.swift */; };
 		E0B2DA192A62B49B0067A58F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2DA182A62B49B0067A58F /* HomeScreen.swift */; };
 		E0B2DA1B2A62B49D0067A58F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B2DA1A2A62B49D0067A58F /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E03DE53F2A62B8BB00A79835 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		E03DE5422A62B91000A79835 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		E03DE5442A62C2EA00A79835 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		E03DE5462A62C6CE00A79835 /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
+		E03DE5482A62C6F400A79835 /* CustomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetViewModel.swift; sourceTree = "<group>"; };
 		E0B2DA132A62B49B0067A58F /* QTodo-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QTodo-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B2DA162A62B49B0067A58F /* QTodo_RealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTodo_RealmApp.swift; sourceTree = "<group>"; };
 		E0B2DA182A62B49B0067A58F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -40,6 +50,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E03DE53E2A62B8A500A79835 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E03DE53F2A62B8BB00A79835 /* CategoryView.swift */,
+				E03DE5442A62C2EA00A79835 /* AddCategoryView.swift */,
+				E03DE5462A62C6CE00A79835 /* CustomSheetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E03DE5412A62B8F500A79835 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E03DE5422A62B91000A79835 /* CategoryViewModel.swift */,
+				E03DE5482A62C6F400A79835 /* CustomSheetViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E0B2DA0A2A62B49B0067A58F = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +90,8 @@
 			children = (
 				E0B2DA162A62B49B0067A58F /* QTodo_RealmApp.swift */,
 				E0B2DA2A2A62B5DB0067A58F /* Models */,
+				E03DE53E2A62B8A500A79835 /* Views */,
+				E03DE5412A62B8F500A79835 /* ViewModels */,
 				E0B2DA242A62B5180067A58F /* Screens */,
 				E0B2DA1A2A62B49D0067A58F /* Assets.xcassets */,
 				E0B2DA1C2A62B49D0067A58F /* Preview Content */,
@@ -170,10 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03DE5452A62C2EA00A79835 /* AddCategoryView.swift in Sources */,
 				E0B2DA192A62B49B0067A58F /* HomeScreen.swift in Sources */,
 				E0B2DA2F2A62B6120067A58F /* TodoModel.swift in Sources */,
 				E0B2DA2C2A62B5F40067A58F /* CategoryModel.swift in Sources */,
 				E0B2DA172A62B49B0067A58F /* QTodo_RealmApp.swift in Sources */,
+				E03DE5432A62B91000A79835 /* CategoryViewModel.swift in Sources */,
+				E03DE5402A62B8BB00A79835 /* CategoryView.swift in Sources */,
+				E03DE5472A62C6CE00A79835 /* CustomSheetView.swift in Sources */,
+				E03DE5492A62C6F400A79835 /* CustomSheetViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
