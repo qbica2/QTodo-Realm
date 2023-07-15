@@ -13,6 +13,8 @@
 		E0B2DA1E2A62B49D0067A58F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B2DA1D2A62B49D0067A58F /* Preview Assets.xcassets */; };
 		E0B2DA272A62B5A80067A58F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E0B2DA262A62B5A80067A58F /* Realm */; };
 		E0B2DA292A62B5A80067A58F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E0B2DA282A62B5A80067A58F /* RealmSwift */; };
+		E0B2DA2C2A62B5F40067A58F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2DA2B2A62B5F40067A58F /* CategoryModel.swift */; };
+		E0B2DA2F2A62B6120067A58F /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2DA2E2A62B6120067A58F /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E0B2DA182A62B49B0067A58F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E0B2DA1A2A62B49D0067A58F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B2DA1D2A62B49D0067A58F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E0B2DA2B2A62B5F40067A58F /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		E0B2DA2E2A62B6120067A58F /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				E0B2DA162A62B49B0067A58F /* QTodo_RealmApp.swift */,
+				E0B2DA2A2A62B5DB0067A58F /* Models */,
 				E0B2DA242A62B5180067A58F /* Screens */,
 				E0B2DA1A2A62B49D0067A58F /* Assets.xcassets */,
 				E0B2DA1C2A62B49D0067A58F /* Preview Content */,
@@ -77,6 +82,15 @@
 				E0B2DA182A62B49B0067A58F /* HomeScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		E0B2DA2A2A62B5DB0067A58F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0B2DA2B2A62B5F40067A58F /* CategoryModel.swift */,
+				E0B2DA2E2A62B6120067A58F /* TodoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B2DA192A62B49B0067A58F /* HomeScreen.swift in Sources */,
+				E0B2DA2F2A62B6120067A58F /* TodoModel.swift in Sources */,
+				E0B2DA2C2A62B5F40067A58F /* CategoryModel.swift in Sources */,
 				E0B2DA172A62B49B0067A58F /* QTodo_RealmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
