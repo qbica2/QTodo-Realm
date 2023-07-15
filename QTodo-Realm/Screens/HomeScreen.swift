@@ -11,6 +11,7 @@ import RealmSwift
 struct HomeScreen: View {
     
     @ObservedResults(CategoryModel.self) var categoryList
+    @State private var isAddingCategorySheetActive: Bool = false
     
     var body: some View {
         VStack {
@@ -25,6 +26,10 @@ struct HomeScreen: View {
                 AddNewCategoryButton
             }
         }
+        .sheet(isPresented: $isAddingCategorySheetActive) {
+            AddCategoryView()
+        }
+        
     }
 }
 
@@ -35,7 +40,7 @@ extension HomeScreen {
     var AddNewCategoryButton: some View {
         
         Button {
-            
+            isAddingCategorySheetActive.toggle()
         } label: {
             Text("Add Category")
                 .tint(.white)
