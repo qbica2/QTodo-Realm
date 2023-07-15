@@ -11,7 +11,7 @@ import SwiftUI
 struct QTodo_RealmApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
         }
     }
 }
