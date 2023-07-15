@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct QTodo_RealmApp: App {
+    
+    @StateObject var csvm = CustomSheetViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            NavigationStack {
+                HomeScreen()
+            }
+            .environmentObject(csvm)
         }
     }
 }
