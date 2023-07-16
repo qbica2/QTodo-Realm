@@ -12,6 +12,7 @@ struct TodoDetailScreen: View {
     
     @ObservedRealmObject var todo: TodoModel
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var csvm: CustomSheetViewModel
     
     @State private var title: String = ""
     @State private var description: String = ""
@@ -38,6 +39,10 @@ struct TodoDetailScreen: View {
         }
         .navigationBarTitle("Edit Todo ✏️")
         .onAppear(perform: updateUI)
+        .sheet(isPresented: $csvm.isCsActive) {
+            CustomSheetView()
+                .presentationDetents([.height(300)])
+        }
     }
 }
 
@@ -129,8 +134,35 @@ extension TodoDetailScreen {
         }
     }
     
-    func saveButtonPressed(){
+    func isTodoTitleValid(title: String) -> Bool {
+        if title.isEmpty {
+            csvm.createErrorSheet(message: "Please enter a valid title!", emojis: "😱😨😰")
+            return false
+        }
         
+        if title.count < 3 {
+            csvm.createErrorSheet(message: "New title must be at least 3 characters long!", emojis: "😱😨😰")
+            return false
+        }
+        
+        return true
+    }
+    
+    func saveButtonPressed(){
+        let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if isTodoTitleValid(title: trimmedTitle) {
+            save(title: trimmedTitle)
+            dismiss()
+        }
+    }
+    
+    func save(title: String){
+        $todo.title.wrappedValue = title
+        $todo.desc.wrappedValue = description
+        $todo.isCompleted.wrappedValue = !isActive
+        $todo.priority.wrappedValue = priority
+        $todo.dueDate.wrappedValue = isScheduled ? dueDate : nil
     }
     
 }
