@@ -21,7 +21,7 @@ struct TodoListScreen: View {
                     TodoListRowView(todo: todo)
                         .swipeActions {
                             Button(role: .destructive) {
-                                // Delete Todo
+                                deleteTodo(todo: todo)
                             } label: {
                                 Image(systemName: "trash")
                             }
@@ -72,6 +72,18 @@ extension TodoListScreen {
         }
 
     }
+}
+
+//MARK: - Functions
+
+extension TodoListScreen {
+    
+    func deleteTodo(todo: TodoModel){
+        if let index = category.todos.firstIndex(where: { $0.id == todo.id }) {
+            $category.todos.remove(at: index)
+        }
+    }
+    
 }
 
 struct TodoListScreen_Previews: PreviewProvider {
