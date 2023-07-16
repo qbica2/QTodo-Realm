@@ -11,7 +11,7 @@ import RealmSwift
 struct AddTodoView: View {
     
     @Environment(\.dismiss) var dismiss
-    
+    @EnvironmentObject var csvm: CustomSheetViewModel
     @ObservedResults(CategoryModel.self) var categories
     @ObservedRealmObject var selectedCategory: CategoryModel
 
@@ -32,6 +32,10 @@ struct AddTodoView: View {
             SaveButton
         }
         .formStyle(.grouped)
+        .sheet(isPresented: $csvm.isCsActive) {
+            CustomSheetView()
+                .presentationDetents([.height(300)])
+        }
     }
 }
 
@@ -100,7 +104,38 @@ extension AddTodoView {
 extension AddTodoView {
     
     func saveButtonPressed(){
-//         handle saving todos
+        let trimmedTitle = todoTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if isTitleValid(title: trimmedTitle) {
+            save(title: trimmedTitle)
+            dismiss()
+        }
+    }
+    
+    func save(title: String){
+        let newTodo = TodoModel()
+        newTodo.title = title
+        newTodo.desc = todoDescription
+        newTodo.priority = priority
+        newTodo.dueDate = isScheduled ? todoDueDate : nil
+        newTodo.creationTimestamp = Date().timeIntervalSince1970
+        newTodo.isCompleted = false
+        
+        $selectedCategory.todos.append(newTodo)
+    }
+    
+    func isTitleValid(title: String) -> Bool {
+        guard !title.isEmpty else {
+            csvm.createErrorSheet(message: "Please enter a valid title!", emojis: "😱😨😰")
+            return false
+        }
+        
+        guard title.count >= 3 else {
+            csvm.createErrorSheet(message: "Your new todo's title must be at least 3 characters long!", emojis: "😱😨😰")
+            return false
+        }
+        
+        return true
     }
 }
 
