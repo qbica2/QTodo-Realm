@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct TodoListRowView: View {
     
     @State private var isActive: Bool = false
     
-    let todo: TodoModel
+    @ObservedRealmObject var todo: TodoModel
     
     var body: some View {
         HStack{
@@ -29,8 +30,7 @@ struct TodoListRowView: View {
         .foregroundColor(.pink.opacity(0.8))
         .onTapGesture {
             withAnimation {
-                isActive.toggle()
-//                toggle todo
+                toggleTodo()
             }
         }
         .onAppear {
@@ -48,6 +48,11 @@ extension TodoListRowView {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM d, yyyy"
         return formatter.string(from: date)
+    }
+    
+    private func toggleTodo(){
+        isActive.toggle()
+        $todo.isCompleted.wrappedValue.toggle()
     }
     
 }
