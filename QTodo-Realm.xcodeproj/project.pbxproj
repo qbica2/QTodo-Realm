@@ -14,6 +14,7 @@
 		E03DE5492A62C6F400A79835 /* CustomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5482A62C6F400A79835 /* CustomSheetViewModel.swift */; };
 		E03DE54B2A63619000A79835 /* TodoListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE54A2A63619000A79835 /* TodoListScreen.swift */; };
 		E04981EB2A63624F0096C9B8 /* TodoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04981EA2A63624F0096C9B8 /* TodoListRowView.swift */; };
+		E04981ED2A640B6C0096C9B8 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04981EC2A640B6C0096C9B8 /* AddTodoView.swift */; };
 		E0B2DA172A62B49B0067A58F /* QTodo_RealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2DA162A62B49B0067A58F /* QTodo_RealmApp.swift */; };
 		E0B2DA192A62B49B0067A58F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2DA182A62B49B0067A58F /* HomeScreen.swift */; };
 		E0B2DA1B2A62B49D0067A58F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B2DA1A2A62B49D0067A58F /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		E03DE5482A62C6F400A79835 /* CustomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetViewModel.swift; sourceTree = "<group>"; };
 		E03DE54A2A63619000A79835 /* TodoListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListScreen.swift; sourceTree = "<group>"; };
 		E04981EA2A63624F0096C9B8 /* TodoListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRowView.swift; sourceTree = "<group>"; };
+		E04981EC2A640B6C0096C9B8 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		E0B2DA132A62B49B0067A58F /* QTodo-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QTodo-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B2DA162A62B49B0067A58F /* QTodo_RealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTodo_RealmApp.swift; sourceTree = "<group>"; };
 		E0B2DA182A62B49B0067A58F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				E03DE5442A62C2EA00A79835 /* AddCategoryView.swift */,
 				E03DE5462A62C6CE00A79835 /* CustomSheetView.swift */,
 				E04981EA2A63624F0096C9B8 /* TodoListRowView.swift */,
+				E04981EC2A640B6C0096C9B8 /* AddTodoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				E03DE5452A62C2EA00A79835 /* AddCategoryView.swift in Sources */,
 				E0B2DA192A62B49B0067A58F /* HomeScreen.swift in Sources */,
+				E04981ED2A640B6C0096C9B8 /* AddTodoView.swift in Sources */,
 				E0B2DA2F2A62B6120067A58F /* TodoModel.swift in Sources */,
 				E0B2DA2C2A62B5F40067A58F /* CategoryModel.swift in Sources */,
 				E04981EB2A63624F0096C9B8 /* TodoListRowView.swift in Sources */,
