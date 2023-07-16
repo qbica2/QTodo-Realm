@@ -48,7 +48,7 @@ struct TodoListScreen: View {
             AddTodoView(selectedCategory: category)
         })
         .navigationDestination(for: TodoModel.self) { todo in
-//                navigate to Todo detail
+            TodoDetailScreen(todo: todo)
         }
         
     }
