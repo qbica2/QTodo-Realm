@@ -49,7 +49,7 @@ extension HomeScreen {
                 }
             }
             .navigationDestination(for: CategoryModel.self, destination: { item in
-//                navigate to list
+                TodoListScreen(category: item)
             })
             .padding()
         }
