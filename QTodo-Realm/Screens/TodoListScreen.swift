@@ -12,6 +12,7 @@ struct TodoListScreen: View {
     
     @Environment(\.colorScheme) var colorScheme
     @ObservedRealmObject var category: CategoryModel
+    @State private var isAddingTodoSheetActive = false
     
     var body: some View {
         VStack {
@@ -43,6 +44,9 @@ struct TodoListScreen: View {
         .safeAreaInset(edge: .bottom, alignment: .trailing) {
             AddTodoButton
         }
+        .sheet(isPresented: $isAddingTodoSheetActive, content: {
+            AddTodoView(selectedCategory: category)
+        })
         .navigationDestination(for: TodoModel.self) { todo in
 //                navigate to Todo detail
         }
@@ -57,7 +61,7 @@ extension TodoListScreen {
     var AddTodoButton: some View {
         
         Button {
-            
+            isAddingTodoSheetActive.toggle()
         } label: {
             Image(systemName: "plus")
                 .tint(.white)
