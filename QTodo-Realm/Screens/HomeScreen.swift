@@ -16,7 +16,11 @@ struct HomeScreen: View {
     var body: some View {
         VStack {
             if categoryList.isEmpty {
-                Text("Empty List")
+                EmptyListView(title: "You haven't created any categories yet.",
+                              subtitle: "Tap to create your first category and start adding todos.")
+                .onTapGesture {
+                    isAddingCategorySheetActive = true
+                }
             } else {
                 CategoryListView
             }
