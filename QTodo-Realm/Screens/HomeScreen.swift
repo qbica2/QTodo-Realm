@@ -14,17 +14,22 @@ struct HomeScreen: View {
     @State private var isAddingCategorySheetActive: Bool = false
     
     var body: some View {
-        VStack {
+        VStack() {
+            TitleLayer
             if categoryList.isEmpty {
+                Spacer()
                 EmptyListView(title: "You haven't created any categories yet.",
                               subtitle: "Tap to create your first category and start adding todos.")
                 .onTapGesture {
                     isAddingCategorySheetActive = true
                 }
+                Spacer()
             } else {
                 CategoryListView
             }
         }
+        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 AddNewCategoryButton
@@ -74,11 +79,21 @@ extension HomeScreen {
         }
 
     }
+    
+    var TitleLayer: some View {
+        Text("Welcome to QTodo")
+            .font(.largeTitle)
+            .foregroundColor(.pink)
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
 
 }
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen()
+        NavigationStack {
+            HomeScreen()
+        }
     }
 }
