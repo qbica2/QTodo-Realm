@@ -36,6 +36,7 @@ struct TodoListScreen: View {
                             .tint(.mint)
                         }
                 }
+                .onMove(perform: moveTodos)
             }
         }
         .navigationTitle(category.title)
@@ -52,6 +53,11 @@ struct TodoListScreen: View {
         })
         .navigationDestination(for: TodoModel.self) { todo in
             TodoDetailScreen(todo: todo)
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
         }
         
     }
@@ -87,6 +93,10 @@ extension TodoListScreen {
         }
     }
     
+    func moveTodos(indexSet: IndexSet, newIndex: Int) {
+        $category.todos.move(fromOffsets: indexSet, toOffset: newIndex)
+    }
+                   
 }
 
 struct TodoListScreen_Previews: PreviewProvider {
