@@ -16,6 +16,9 @@ struct TodoListScreen: View {
     
     var body: some View {
         VStack {
+            
+            ImportantTodosListView(viewModel: ImportantTodosViewModel(category: category))
+            
             List {
                 ForEach(category.todos, id: \.id) { todo in
                     TodoListRowView(todo: todo)
