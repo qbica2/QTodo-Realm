@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E02E76382A6560F70003585B /* ImportantTodosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E76372A6560F70003585B /* ImportantTodosListView.swift */; };
+		E02E763A2A6700760003585B /* ImportantTodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E76392A6700760003585B /* ImportantTodosViewModel.swift */; };
 		E03DE5402A62B8BB00A79835 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE53F2A62B8BB00A79835 /* CategoryView.swift */; };
 		E03DE5432A62B91000A79835 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5422A62B91000A79835 /* CategoryViewModel.swift */; };
 		E03DE5452A62C2EA00A79835 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DE5442A62C2EA00A79835 /* AddCategoryView.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E02E76372A6560F70003585B /* ImportantTodosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTodosListView.swift; sourceTree = "<group>"; };
+		E02E76392A6700760003585B /* ImportantTodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTodosViewModel.swift; sourceTree = "<group>"; };
 		E03DE53F2A62B8BB00A79835 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E03DE5422A62B91000A79835 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		E03DE5442A62C2EA00A79835 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 				E04981EA2A63624F0096C9B8 /* TodoListRowView.swift */,
 				E04981EC2A640B6C0096C9B8 /* AddTodoView.swift */,
 				E04981F02A64A4B20096C9B8 /* EmptyListView.swift */,
+				E02E76372A6560F70003585B /* ImportantTodosListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 			children = (
 				E03DE5422A62B91000A79835 /* CategoryViewModel.swift */,
 				E03DE5482A62C6F400A79835 /* CustomSheetViewModel.swift */,
+				E02E76392A6700760003585B /* ImportantTodosViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -221,11 +227,13 @@
 				E0B2DA192A62B49B0067A58F /* HomeScreen.swift in Sources */,
 				E04981ED2A640B6C0096C9B8 /* AddTodoView.swift in Sources */,
 				E0B2DA2F2A62B6120067A58F /* TodoModel.swift in Sources */,
+				E02E76382A6560F70003585B /* ImportantTodosListView.swift in Sources */,
 				E0B2DA2C2A62B5F40067A58F /* CategoryModel.swift in Sources */,
 				E04981EB2A63624F0096C9B8 /* TodoListRowView.swift in Sources */,
 				E0B2DA172A62B49B0067A58F /* QTodo_RealmApp.swift in Sources */,
 				E03DE5432A62B91000A79835 /* CategoryViewModel.swift in Sources */,
 				E03DE5402A62B8BB00A79835 /* CategoryView.swift in Sources */,
+				E02E763A2A6700760003585B /* ImportantTodosViewModel.swift in Sources */,
 				E03DE5472A62C6CE00A79835 /* CustomSheetView.swift in Sources */,
 				E03DE5492A62C6F400A79835 /* CustomSheetViewModel.swift in Sources */,
 				E04981EF2A643CB20096C9B8 /* TodoDetailScreen.swift in Sources */,
